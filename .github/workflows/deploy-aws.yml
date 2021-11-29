@@ -25,10 +25,6 @@ jobs:
           aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
           aws-region: us-east-1
 
-        # Build App and Run Application Test
-      - name: Build Application and Run unit Test
-        run: python app.py 
-
   continuous-deployment:
     runs-on: ubuntu-latest
     needs: [continuous-integration]
